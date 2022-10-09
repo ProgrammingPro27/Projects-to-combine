@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blockMenu.css">
+    <link rel="stylesheet" href="NoiseControlStyle.css">
+    <link rel="stylesheet" href="blockColorPickerStyle.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Editorio</title>
+</head>
+
+<body>
+    <div id="optionPartsMenu" style="display: none;"></div>
+    <div id="menu" style="display: none;"></div>
+    <canvas id="canvas"></canvas>
+    <div id="controlPanelButton" onclick="showElement(this,document.getElementById('menu'))"></div>
+    <div id="controlWindowButton" onclick="showElement(this,document.getElementById('optionPartsMenu'))"></div>
+    <script src="Perlin.js"></script>
+    <script src="IsometricTile.js"></script>
+    <script src="BlockMenu.js"></script>
+    <script src="BlockColorPicker.js"></script>
+    <script src="NoiseControl.js"></script>
+    <script src="Chunk.js"></script>
+    <script src="ZoomAndPan.js"></script>
+    <script src="mapScripts.js"></script>
+    <script src="contentMethods.js"></script>
+</body>
+
+</html>

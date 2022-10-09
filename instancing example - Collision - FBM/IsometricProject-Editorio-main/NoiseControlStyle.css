@@ -1,0 +1,16 @@
+#noiseControlWrapper {
+height: 25%;
+width: 100%;
+position: fixed;
+bottom: 0;
+display: none;
+flex-wrap: wrap;  
+align-items: center;
+justify-content: center;
+  }
+  .noiseControlPart{
+    width: 95%;
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+  }

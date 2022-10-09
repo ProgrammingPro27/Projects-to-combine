@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;           
+}
+body{
+    background-image: url("Editor.io.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50vw auto;
+    background-color: #696969;
+}
+::-webkit-scrollbar {display:none;}
+
+#menu {
+    width: 15%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    z-index: 1;
+    overflow:scroll;
+}
+
+.mainMenuOptionButtons {
+    width: 100%;
+    font-size: 1.5vw;
+    padding: 1.5vw;
+    outline:none;
+    border:none;
+    color: white;
+    background-color: #ffa000;
+    cursor:pointer;
+    font-family: 'Roboto', sans-serif;
+    overflow-wrap: break-word;
+}
+
+.mainMenuOptionButtons:hover{
+    background-color: #DCDCDC;
+    color: #ffa000;
+    border-bottom: 1px solid black;;
+    transition-duration: 0.7s;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#controlPanelButton{
+    clip-path: polygon(0% 0%, 100% 0, 100% 0, 75% 100%, 0% 100%);
+    background-color:#ffa000;
+    color: white;
+    width: 7vw;
+    height: 5vh;
+    background-image: url("./edit\ block.png");
+    background-size: 2.6vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+#controlPanelButton:hover{
+    background-color:white;
+}
+
+#controlWindowButton{
+    clip-path: polygon(0% 0%, 100% 0, 100% 0, 75% 100%, 0% 100%);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    background-color:#ffa000;
+    color: white;
+    width: 7vw;
+    height: 5vh;
+    float: right;
+    background-image: url("./edit\ block\ chunk.png");
+    background-size: 2.4vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#controlWindowButton:hover{
+    background-color:white;
+}
+
+
+#optionPartsMenu {
+    right: 0;
+    position: absolute;
+    width: 15%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap:5px;
+    overflow: scroll;
+    z-index: 2;
+}
+
+.part{
+    background-color: #ffa000;
+    color:white;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    padding: 1vh 1vh 1vh 1vh;
+    border-radius: 0.5vw;
+}
+
+#mode {
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.5vw;
+    background-color: #ffa000;
+}
