@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .range-slider {
+      width: 300px;
+      margin: auto;
+      text-align: center;
+      position: relative;
+      height: 6em;
+    }
+
+    .range-slider input[type=range] {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    /*
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #2497e3;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+      background: #2497e3;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+      background: #2497e3;
+    }
+*/
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      background: #2497e3;
+      border-radius: 1px;
+      box-shadow: none;
+      border: 0;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      z-index: 2;
+      position: relative;
+      box-shadow: 0px 0px 0px #000;
+      border: 1px solid #2497e3;
+      height: 18px;
+      width: 18px;
+      border-radius: 25px;
+      background: #a1d0ff;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -7px;
+    }
+
+    input[type=range] {
+      pointer-events: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      /*Webkit Browsers like Chrome and Safari*/
+      pointer-events: auto;
+    }
+
+    input[type=range]::-moz-range-thumb {
+      /*Firefox*/
+      pointer-events: auto;
+    }
+
+    input[type=range]::-ms-thumb {
+      /*Internet Explorer*/
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class='range-slider'>
+      <input id="0" type="range" min="0" max="200" step="1" value="50" oninput="control(Number(this.id))">
+      <input id="1" type="range" min="0" max="200" step="1" value="100" oninput="control(Number(this.id))">
+      <input id="2" type="range" min="0" max="200" step="1" value="150" oninput="control(Number(this.id))">
+      <input id="3" type="range" min="0" max="200" step="1" value="200" oninput="control(Number(this.id))">
+    </div>
+  </div>
+  <script>
+    function control(id) {
+      let thumbValues = [
+        document.getElementById("0"),
+        document.getElementById("1"),
+        document.getElementById("2"),
+        document.getElementById("3")
+      ]
+      if (thumbValues[id + 1]) {
+        if (Number(thumbValues[id].value) >= Number(thumbValues[id + 1].value)) {
+          thumbValues[id].value = thumbValues[id + 1].value
+        }
+      }
+      if (thumbValues[id - 1]) {
+        if (Number(thumbValues[id].value) <= Number(thumbValues[id - 1].value)) {
+          thumbValues[id].value = thumbValues[id - 1].value
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
